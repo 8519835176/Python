@@ -1,0 +1,17 @@
+n = 8
+
+# Initialize the first two Fibonacci numbers
+a, b = 0, 1
+
+# Print the first Fibonacci number if n is 1
+if n == 1:
+    print(a)
+else:
+    # Print the first two Fibonacci numbers
+    print(a, b, end=" ")
+
+    # Calculate and print the rest of the Fibonacci sequence up to the Nth number
+    for _ in range(2, n):
+        c = a + b
+        print(c, end=" ")
+        a, b = b, c
