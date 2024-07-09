@@ -1,0 +1,22 @@
+# Initialize the total balance
+total_balance = 0
+
+# Get input from the user for each denomination and its count
+denomination1 = int(input("Enter the 1st Denomination: "))
+count1 = int(input("Enter the 1st Denomination number of notes: "))
+total_balance += denomination1 * count1
+
+denomination2 = int(input("Enter the 2nd Denomination: "))
+count2 = int(input("Enter the 2nd Denomination number of notes: "))
+total_balance += denomination2 * count2
+
+denomination3 = int(input("Enter the 3rd Denomination: "))
+count3 = int(input("Enter the 3rd Denomination number of notes: "))
+total_balance += denomination3 * count3
+
+denomination4 = int(input("Enter the 4th Denomination: "))
+count4 = int(input("Enter the 4th Denomination number of notes: "))
+total_balance += denomination4 * count4
+
+# Display the total available balance
+print(f"\nTotal Available Balance in ATM: {total_balance}")
