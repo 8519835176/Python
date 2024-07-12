@@ -1,0 +1,16 @@
+# Sample Input
+statement = "Modi Birthday @ September 17, #&$% is the wishes code for him."
+
+# Initialize a counter for special characters
+special_char_count = 0
+
+# Define the set of special characters (you can customize this set as needed)
+special_characters = set("!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~")
+
+# Iterate through each character in the statement
+for char in statement:
+    if char in special_characters:
+        special_char_count += 1
+
+# Print the number of special characters
+print("Number of special characters:", special_char_count)
