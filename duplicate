@@ -1,0 +1,11 @@
+# Sample Input
+a = [15, 14, 25, 14, 32, 14, 31]
+
+# Remove duplicates by converting the list to a set
+b = set(a)
+
+# Convert the set back to a list and sort it
+sorted_array = sorted(b)
+
+# Print the sorted array
+print("Sorted Array =", sorted_array)
