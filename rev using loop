@@ -1,0 +1,31 @@
+def reverse_number(num):
+    # Handle negative numbers
+    is_negative = num < 0
+    num = abs(num)
+
+    reversed_num = 0
+    while num > 0:
+        digit = num % 10
+        reversed_num = reversed_num * 10 + digit
+        num //= 10
+
+    if is_negative:
+        reversed_num = -reversed_num
+
+    return reversed_num
+
+# Input from user
+user_input = input("Enter the number: ")
+
+# Convert input to integer
+try:
+    num = int(user_input)
+except ValueError:
+    print("Invalid input. Please enter a valid number.")
+    exit()
+
+# Reverse the number
+reversed_num = reverse_number(num)
+
+# Output the result
+print(f"Reverse Number: {reversed_num}")
