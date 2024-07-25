@@ -1,0 +1,33 @@
+def find_mth_max_nth_min(arr, M, N):
+    if M <= 0 or N <= 0 or M > len(arr) or N > len(arr):
+        return "Invalid input: M and N must be within the range of the array length"
+
+    sorted_arr = sorted(arr)
+
+    mth_max = sorted_arr[-M]
+    nth_min = sorted_arr[N-1]
+
+    return mth_max, nth_min, mth_max + nth_min, mth_max - nth_min
+
+# Test cases
+test_cases = [
+    ([14, 16, 87, 36, 25, 89, 34], 1, 3),
+    ([16, 16, 16, 16, 16], 0, 1),
+    ([0, 0, 0, 0], 1, 2),
+    ([-12, -78, -35, -42, -85], 3, 3),
+    ([15, 19, 34, 56, 12], 6, 3),
+    ([85, 45, 65, 75, 95], 5, 7)
+]
+
+for arr, M, N in test_cases:
+    print(f"Array: {arr}, M: {M}, N: {N}")
+    result = find_mth_max_nth_min(arr, M, N)
+    if isinstance(result, str):
+        print(result)
+    else:
+        mth_max, nth_min, sum_result, diff_result = result
+        print(f"{M}th Maximum Number = {mth_max}")
+        print(f"{N}th Minimum Number = {nth_min}")
+        print(f"Sum = {sum_result}")
+        print(f"Difference = {diff_result}")
+    print()
