@@ -1,0 +1,11 @@
+names="aa,cc,gg,bb"
+order="a"
+name_list=names.split(',')
+if order=="a":
+    sort=sorted(name_list)
+elif order=="d":
+    sort=sorted(name_list,reverse=true)
+else:
+    print("not valid")
+    sort=names
+print(sort)
