@@ -1,0 +1,9 @@
+m=50
+n=100
+k=7
+numbers=[]
+current=m
+while current<=n:
+numbers.append(current)
+current+=k
+print(",".join(map(str,numbers)))
