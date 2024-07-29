@@ -1,0 +1,15 @@
+def paraCheck( seq ):  
+   while True:  
+       if '()' in seq :  
+           seq = seq.replace ( '()' , '' )  
+       elif '{}' in seq :  
+           seq = seq.replace ( '{}' , '' )  
+       elif '[]' in seq :  
+           seq = seq.replace ( '[]' , '' )  
+       else :  
+           return not seq  
+  
+seq = '{[()]}'  
+print(f'Is {seq} valid ? : {paraCheck(seq)}')  
+seq1 = '{[()]}{]{}}'  
+print(f'Is {seq1} valid ? : {paraCheck (seq1)}')
